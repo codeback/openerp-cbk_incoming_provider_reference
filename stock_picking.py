@@ -24,12 +24,21 @@
 
 from osv import fields,osv
 
-class stock_picking(osv.osv):
+class stock_picking_in(osv.osv):
 	
     _inherit = "stock.picking.in"
     _columns = {
-        'ext_name': fields.char('External Reference', size=64),
+        'ext_name': fields.char('External Reference', size=64, store=True),
+    }
+
+stock_picking_in()
+
+
+class stock_picking(osv.osv):
+	
+    _inherit = "stock.picking"
+    _columns = {
+        'ext_name': fields.char('External Reference', size=64, store=True),
     }
 
 stock_picking()
-

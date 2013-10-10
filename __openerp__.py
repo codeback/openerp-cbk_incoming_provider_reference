@@ -24,10 +24,10 @@
 
 {
     'name' : 'Incoming provider reference',
-    'version' : '0.1'
+    'version' : '0.1',
     'author': 'Codeback Software',
-    'summary': 'Provider reference for incoming shipments'
-    'description' : 'Adds the original provider reference in incoming shipments'
+    'summary': 'Provider reference for incoming shipments',
+    'description' : 'Adds the original provider reference in incoming shipments',
     'depends' : ['stock'],
     'category': 'Warehouse',    
     'data': [],
