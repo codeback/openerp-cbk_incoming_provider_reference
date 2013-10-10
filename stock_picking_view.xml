@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<openerp>
+    <data> 
+           
+        <record id="provider_reference_form_view" model="ir.ui.view">
+            <field name="name">provider.reference.form.view</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath
+                        expr="//page[@string='Additional Info']/group"
+                        position="after">
+                        <group>
+                            <field name="ext_name"/>
+                        </group>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="provider_reference_tree_view" model="ir.ui.view">
+            <field name="name">provider.reference.tree.view</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="min_date" position="after">
+                        <field name="ext_name"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <!-- Stock Picking Form -->
+        <record id="stock.view_picking_in_form_tianelsur" model="ir.ui.view">
+            <field name="name">stock.picking.in.form.ext_ref.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="type">form</field>
+            <field name="priority">20</field>
+            <field name="inherit_id" ref="stock.view_picking_in_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="ext_name"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
