@@ -24,7 +24,7 @@ msgstr "Albarán"
 #: field:stock.picking,ext_name:0
 #: field:stock.picking.in,ext_name:0
 msgid "External Reference"
-msgstr "Referencia Externa"
+msgstr "Referencia proveedor"
 
 #. module: cbk_incoming_provider_reference
 #: model:ir.model,name:cbk_incoming_provider_reference.model_stock_picking_in
